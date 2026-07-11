@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  zero-trust-engine:
+    build: .
+    container_name: zero-trust-engine
+    ports:
+      - "8080:8080"
+    environment:
+      - ZT_MODE=enforce
+      - LOG_LEVEL=info
